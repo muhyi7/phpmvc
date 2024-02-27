@@ -41,7 +41,7 @@ class Database {
                 case is_bool($value):
                     $type = PDO::PARAM_BOOL;
                     break;
-                case is_null($value);
+                case is_null($value):
                     $type = PDO::PARAM_NULL;
                     break;
                 default :
@@ -67,6 +67,11 @@ class Database {
     {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
     }
 
 
