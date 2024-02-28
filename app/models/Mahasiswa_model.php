@@ -37,6 +37,8 @@ class Mahasiswa_model {
         $this->db->execute();
     
         return $this->db->rowCount();
+
+        // return 0;
     }
     
 
